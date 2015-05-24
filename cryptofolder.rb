@@ -2,6 +2,7 @@ require 'rubygems'
 require 'listen'
 require 'fileutils'
 require 'mkmf'
+require 'io/console'
 
 $: << "."
 require 'crypto'
@@ -30,7 +31,7 @@ end
 @index_file = "#{@folder_enc}/index" 
 
 print "Password:"
-@password = STDIN.gets.chomp
+@password = STDIN.noecho(&:gets).chomp
 
 # STEP 1 - CREATE DIRECTORIES IF NECESSARY
 if !Dir.exist?(@folder_enc) then
