@@ -1,0 +1,16 @@
+CRYPTOFOLDER
+============
+
+Cryptofolder watches a folder and encrypts its contents into another folder. 
+All the files that have been added to the watched folder are removed after the
+program stops so only the encrypted files remain.
+
+Note: This program needs the openssl binary to work
+
+Usage:
+
+ruby cryptofolder.rb ENCRYPTED_FOLDER DECRYPTED_FOLDER
+
+You can stop the program using the CTRL+C shortcut
+
+
