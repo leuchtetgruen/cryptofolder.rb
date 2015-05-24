@@ -37,6 +37,9 @@ print "Password:"
 if !Dir.exist?(@folder_enc) then
 	Dir.mkdir(@folder_enc)
 end
+if !File.exist?("#{@folder_enc}/INSTRUCTIONS.txt") then
+	FileUtils.copy("INSTRUCTIONS.txt", "#{@folder_enc}/INSTRUCTIONS.txt")
+end
 if !Dir.exist?(@folder_dec) then
 	Dir.mkdir(@folder_dec)
 end

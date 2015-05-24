@@ -1,0 +1,19 @@
+This folder has been encrypted using CryptoFolder.rb
+(https://github.com/leuchtetgruen/cryptofolder.rb)
+
+If you can't get the software used for encrypting these files running you
+can decrypt them by hand.
+
+You can use the openssl command to decrypt any file in this folder:
+
+openssl aes-256-cbc -d -in ENCRYPTED_FILE -out DECRYPTED_FILE -pass pass:PASSWORD
+
+The ENCRYPTED_FILE would be a file from this folder.
+The DECRYPTED_FILE would be the filename you would like the decrypted file to have
+The PASSWORD is the password you used for encryption.
+
+If you're looking for a specific file you can first decrypt the index-file.
+It's JSON-File showing you which encrypted file name belongs to which original filename
+
+You can get the openssl program from here: https://www.openssl.org/ but it's
+very likely that there is a build for your platform too.
