@@ -54,7 +54,7 @@ encrypted_file_list(@index_file, @password).each do |enc_file|
 	# Create folders if necessary
 	basefolder = File.dirname(dec_file)
 	if (!File.exist?(basefolder)) then
-		Dir.mkdir(basefolder)
+		FileUtils.mkdir_p(basefolder)
 	end
 
 	decrypt_file(full_enc_file, dec_file, @password)
